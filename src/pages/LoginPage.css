@@ -1,0 +1,104 @@
+/* Background da tela */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f1923; /* fundo geral */
+    padding: 1rem;
+  }
+  
+  /* Container branco com borda azul escura */
+  .login-card {
+    background-color: #1a2639; /* container */
+    border: 2px solid #263d54; /* borda */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  /* Título branco */
+  .login-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Labels (texto dos inputs) */
+  .login-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #a0aec0; /* cor mais clara para label */
+    font-size: 0.9rem;
+  }
+  
+  /* Inputs com fundo escuro e borda azul */
+  .login-input {
+    margin-top: 0.25rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid #2c4762; /* borda azul */
+    background-color: #15202b; /* fundo do input */
+    color: #e0e7ff; /* texto claro */
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .login-input::placeholder {
+    color: #a0aec0;
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border-color: #4e9cff;
+    box-shadow: 0 0 6px #4e9cff;
+  }
+  
+  /* Mensagem de erro */
+  .login-error {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Botão azul com gradiente vertical e borda */
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #3a7bd5;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #4e9cff, #3a7bd5);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .login-button:hover:not(:disabled) {
+    background: linear-gradient(to bottom, #3a7bd5, #4e9cff);
+  }
+  
+  .login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Link estilizado - você pode adicionar se usar links */
+  .login-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #6cb2eb;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
