@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { JSX } from "react/jsx-runtime";
+import { useNavigate } from "react-router-dom"; 
 import "../pages/LoginPage.css";
 
 type LoginFormData = {
@@ -8,7 +9,7 @@ type LoginFormData = {
 };
 
 export default function LoginForm(): JSX.Element {
-  console.log("API URL:", process.env.REACT_APP_API_URL);
+  const navigate = useNavigate();
   const [form, setForm] = useState<LoginFormData>({
     email: "",
     password: "",
@@ -55,8 +56,8 @@ export default function LoginForm(): JSX.Element {
       }
 
       const user = await response.json();
-      alert(`Bem vindo, ${user.name}!`);
-      // Aqui você pode salvar user no contexto/global storage, redirecionar, etc.
+      localStorage.setItem("user", JSON.stringify(user));
+      navigate("/home");
 
     } catch {
       setError("Erro inesperado.");
